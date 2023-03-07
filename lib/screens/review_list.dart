@@ -15,7 +15,7 @@ class ReviewList extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Review(
-          pathImage: 'assets/imgs/perfil1.jpg',
+          pathImage: 'assets/img/perfil1.jpg',
           user: 'Will Jhonson',
           details: '1 review 5 photos',
           comment: 'That´s wonderfull',

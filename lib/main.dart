@@ -1,6 +1,8 @@
 import 'package:flutter_application_9/screens/description_place_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_9/screens/header.dart';
 import 'package:flutter_application_9/screens/review_list.dart';
+import 'package:flutter_application_9/screens/gardient_back.dart';
 
 void main() {
   runApp(const MainApp());
@@ -18,13 +20,21 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-      //     body: DescriptionPlaceScreen(
-      //   descriptionPlace: descriptionText,
-      //   namePlace: namePlace,
-      //   stars: 5,
-      // ),
-      body: ReviewList(),
-      ),
+          body: Stack(
+        children: [
+          ListView(
+            children: [
+              DescriptionPlaceScreen(
+                descriptionPlace: descriptionText,
+                namePlace: namePlace,
+                stars: 5,
+              ),
+              const ReviewList(),
+            ],
+          ),
+          const Header()
+        ],
+      )),
     );
   }
 }
