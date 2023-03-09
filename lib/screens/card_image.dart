@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_9/screens/small_button.dart';
 
 class CardImage extends StatelessWidget {
   final String pathImage;
@@ -27,8 +28,9 @@ class CardImage extends StatelessWidget {
         ],
       ),
     );
-    return card;
-
-   // return const Placeholder();
+    return Stack(
+      alignment: const Alignment(0.9, 1.1),
+      children: [card, SmallButton()],
+    );
   }
 }
